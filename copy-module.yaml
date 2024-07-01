@@ -1,0 +1,10 @@
+- hosts: Dev
+  become: yes
+  tasks: 
+  - name: copy files from master controller to all servers
+    copy: 
+      src: /home/osureto2/May-K8S-Files
+      dest: /home/atalaku/
+      # owner: osureto2
+      # group: osureto2
+      # mode: 755

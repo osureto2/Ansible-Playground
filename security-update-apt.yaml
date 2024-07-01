@@ -1,0 +1,11 @@
+- hosts: Dev
+  become: true
+  ignore_errors: true
+  tasks: 
+  - name: update security packages in Dev hosts 
+    apt: 
+      update_cache: yes
+  - name: upgrade all packages to the latest version 
+    apt: 
+      upgrade: safe
+      update_cache: yes
